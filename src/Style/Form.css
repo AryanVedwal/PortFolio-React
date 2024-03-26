@@ -72,7 +72,7 @@ form .form-row .textarea {
   position: absolute;
   pointer-events: none;
   bottom: 10px;
-  font-size: 16px;
+  font-size: clamp(1rem, 0.9633rem + 0.1835vw, 1.25rem);
   transition: all 0.3s ease;
 }
 .textarea label {
@@ -131,7 +131,7 @@ form .form-row .textarea {
   position: relative;
   z-index: 2;
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .contact-form .text {
     font-size: 30px;
   }
@@ -146,6 +146,9 @@ form .form-row .textarea {
   }
   .submit-btn .input-data {
     width: 40% !important;
+  }
+  .submit-btn .input-data input {
+    font-size: 14px;
   }
 }
 /*-- Contact-Form --*/

@@ -27,7 +27,7 @@ const About = () => {
             <img src="/Images/Profile.png" alt="" />
           </div>
           <div className="about-text">
-            <h1>Hi I'm Aryan Vedwal</h1> <br />
+            <h1 className="jose" >Hi I'm Aryan Vedwal</h1> <br />
             <p>
               Welcome to my portfolio! I'm a graduate in Computer Science,
               specializing in full stack MERN development. I'm passionate about
@@ -62,7 +62,7 @@ const About = () => {
           <a href="mailto:aryanvedwal01@gmail.com" target="_blank" rel="noopener noreferrer">
             <Mail className="svg" />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="/public/index.html" download target="_blank" rel="noopener noreferrer">
             <File className="svg" />
           </a>
           <span className="h-line"></span>

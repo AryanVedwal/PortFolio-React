@@ -15,12 +15,7 @@ const ProjectItem = () => {
           id={`item-${index + 1}`}
           style={{ "--bg-image": `url(${element.imageUrl})` }}
         >
-          <div
-            className="item-data"
-            // data-scroll
-            // data-scroll-sticky
-            // data-scroll-target={`#item-${index + 1}`}
-          >
+          <div className="item-data">
             <span className="item-index">
               {`0${index + 1}`}
               <motion.span

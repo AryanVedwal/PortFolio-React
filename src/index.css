@@ -154,8 +154,12 @@ nav {
   width: 100%;
 }
 
+.about-text h1 {
+  font-size: clamp(1.75rem, 1.6399rem + 0.5505vw, 2.5rem);
+}
+
 .about-text p {
-  font-size: 14px;
+  font-size: clamp(0.8125rem, 0.7575rem + 0.2752vw, 1.1875rem);
 }
 
 .social-link {
@@ -187,25 +191,49 @@ nav {
   padding: 12px;
 }
 
+@media screen and (min-width: 769px) {
+  .project-item {
+    overflow: hidden;
+  }
+
+  .item-data {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    width: 45%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+  }
+
+  .item-image {
+    position: relative;
+    height: 100%;
+  }
+
+  .first-image,
+  .second-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
 .project-item {
   height: 80vh;
   position: relative;
-  overflow: hidden;
   margin-bottom: 32px;
 }
 
 .item-data {
-  position: absolute;
-  top: 32px;
-  left: 32px;
-  width: 45%;
-  min-height: 300px;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 12px;
-  z-index: 1;
-  backdrop-filter: blur(10px);
 }
 
 .item-data > span {
@@ -255,18 +283,6 @@ nav {
 
 .project-des {
   font-size: clamp(0.875rem, 0.8383rem + 0.1835vw, 1.125rem);
-}
-
-.item-image {
-  position: relative;
-  height: 100%;
-}
-
-.first-image,
-.second-image {
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .first-image {
@@ -326,15 +342,6 @@ nav {
     padding: 12px;
   }
 
-  .item-data {
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: center;
-    text-align: center;
-  }
-
   .about-image img {
     width: 240px;
   }
@@ -342,10 +349,43 @@ nav {
   .skill-item {
     height: 50px;
   }
-}
 
-@media screen and (max-width: 600px) {
   .section-head {
     text-align: center;
+  }
+
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 32px;
+    padding: 0;
+    height: fit-content;
+    min-height: 90vh;
+  }
+
+  .item-data {
+    width: 100%;
+    padding: 12px 8px;
+  }
+
+  .item-image,
+  .item-data {
+    min-height: 300px;
+  }
+
+  .item-image {
+    position: relative;
+    padding: 12px;
+  }
+
+  .second-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .second-image {
+    height: 200px;
   }
 }
