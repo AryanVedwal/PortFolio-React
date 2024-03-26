@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef } from "react";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import "./Loco.css";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Projects from "./Pages/Projects";
+import Skills from "./Pages/Skills";
+import Contact from "./Pages/Contact";
 
-function App() {
+const App = () => {
+  const containerRef = useRef(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <LocomotiveScrollProvider
+        options={{
+          smooth: true,
+        }}
+        watch={[]}
+        containerRef={containerRef}
+      >
+        <main data-scroll-container ref={containerRef}>
+          <Home />
+          <About />
+          <Projects />
+          <Skills />
+          <Contact />
+        </main>
+      </LocomotiveScrollProvider>
+    </>
   );
-}
+};
 
 export default App;
