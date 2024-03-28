@@ -67,7 +67,7 @@ const About = () => {
             <Mail className="svg" />
           </a>
           <a
-            href="https://drive.google.com/file/d/18E9j7uU5NaARMUC-syDzDuglnrevuGbg/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1yJYTN4hucO1RcaLjEq7OUO4mDHJ3GULD/view?usp=drive_link"
             download
             target="_blank"
             rel="noopener noreferrer"
